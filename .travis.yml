@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - "4.3"
+
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - sh build_php_7.sh
+
+script:
+  - npm install
+  - npm test

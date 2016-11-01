@@ -1,0 +1,23 @@
+{
+  "name": "aws-lambda-php",
+  "version": "0.0.1",
+  "description": "Running PHP code on AWS Lambda function with custom build static php binary",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive"
+  },
+  "author": "Danny Linden <info@dannylinden.de> (https://twitter.com/CodingDanny)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "lambda-tester": "^2.0.0"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/dannylinden/aws-lambda-php"
+  }
+}
