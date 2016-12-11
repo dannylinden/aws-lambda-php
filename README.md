@@ -12,12 +12,12 @@ sh build_php_7.sh
 ```
 
 ### PHP Version
-We Using PHP 7.1.0RC5 to compile the PHP binary
-To switch the PHP version you can set the Branch to checkout sources from
-by edit the "PHP_VERSION_GIT_BRANCH param on `sh build_php_7.sh` at line 8
+We are using PHP 7.1.0RC5 to compile the PHP binary
+To switch the PHP version you can set the Branch to checkout sources from a different branch
+by editing the "PHP_VERSION_GIT_BRANCH param on `sh build_php_7.sh` at line 8
 
 ### Running local Unittest for the PHP Example Application
-You can run the NodeJs Unittest with "lambda-tester" by Build an run the specific docker container:
+You can run the NodeJs Unittest with "lambda-tester" by building and running the specific docker container:
 
 ```shell
 docker build -t lambda-php-unittest -f Dockerfile.TestLambdaApp .
