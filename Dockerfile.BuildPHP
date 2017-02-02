@@ -55,6 +55,7 @@ RUN ./configure \
     --enable-sysvmsg \
     --enable-sysvsem \
     --enable-sysvshm \
+    --enable-json \
     --with-curl \
     --with-iconv \
     --with-gmp \
