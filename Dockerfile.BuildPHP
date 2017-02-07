@@ -23,7 +23,8 @@ RUN apt-get update && apt-get install -y \
 	libssl-dev \
 	libgmp-dev \
 	libpspell-dev \
-	librecode-dev
+	librecode-dev \
+	php-mysql
 
 RUN git clone -b $PHP_VERSION https://github.com/php/php-src /php-src/
 
@@ -45,7 +46,6 @@ RUN ./configure \
     --without-pear \
     --enable-shared=no	\
 	--enable-static=yes	\
-    --disable-all \
     --enable-mbstring \
     --enable-zip \
     --enable-bcmath \
@@ -60,9 +60,14 @@ RUN ./configure \
     --with-iconv \
     --with-gmp \
     --with-gd \
+    --enable-ctype \
+    --enable-pdo \
+    --with-mysqli=mysqlnd \
+    --with-pdo-mysql=mysqlnd \
     --enable-gd-native-ttf \
     --enable-gd-jis-conv \
-    --libdir=/usr/lib64
+    --libdir=/usr/lib64 \
+    --disable-opcache
 
 RUN make
 
