@@ -45,7 +45,7 @@ RUN ./configure \
     --with-config-file-path=$HOME/php7/usr/etc \
     --without-pear \
     --enable-shared=no	\
-	--enable-static=yes	\
+    --enable-static=yes	\
     --enable-mbstring \
     --enable-zip \
     --enable-bcmath \
@@ -67,7 +67,8 @@ RUN ./configure \
     --enable-gd-native-ttf \
     --enable-gd-jis-conv \
     --libdir=/usr/lib64 \
-    --disable-opcache
+    --disable-opcache \
+    --disable-cgi
 
 RUN make
 
