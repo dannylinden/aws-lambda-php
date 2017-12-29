@@ -73,3 +73,5 @@ RUN ./configure \
 RUN make
 
 RUN make install
+
+RUN strip /root/php7/usr/bin/php
